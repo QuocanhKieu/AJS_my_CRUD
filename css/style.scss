@@ -1,0 +1,134 @@
+@import "./jquery-ui.css";
+@import "./bootstrap.css";
+@import "./all.css";
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;600;700&display=swap");
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Baloo Paaji 2", cursive;
+} /*# sourceMappingURL=style.css.map */
+
+$backgroundColorPrimary: #333;
+$colorPrimary: #fff;
+
+header {
+  height: 110vh;
+  background-image: url("../images/header.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .containerParent.forHeader {
+    background-color: transparent;
+    padding-top: 20px;
+    div.container.forHeader {
+      height: 70%;
+      & * {
+        padding: 0;
+        margin: 0;
+      }
+      nav.navbar {
+        color: $colorPrimary !important;
+
+        background-color: transparent !important;
+        height: 50px;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+        a {
+          color: inherit;
+        }
+        div.navbar-collapse {
+          flex-grow: 0;
+        }
+        div.navbar-nav {
+          & > a.nav-link {
+            padding: 20px;
+            font-size: 1.6em;
+            font-weight: 400;
+            line-height: 0;
+          }
+          & > a.nav-link:hover {
+            background-color: #fff;
+            color: #594c8d;
+          }
+        }
+        a.navbar-brand {
+          font-size: 2.5em;
+          font-weight: 600;
+        }
+        button.navbar-toggler {
+          background: #fff;
+        }
+        span.navbar-toggler-icon {
+          font-size: 1.6em;
+          border: none;
+          color: #fff;
+        }
+        div.navbar-nav {
+          // background-color: #594c8d99;
+        }
+      }
+    }
+  }
+  div.containerParent.two {
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div.container.two {
+      padding-top: 20px;
+      width: fit-content;
+    }
+    // font-size:;
+    h1 {
+      padding-top: 40px;
+      font-size: 4em;
+      line-height: 60px;
+      font-weight: 700;
+    }
+    h2 {
+      letter-spacing: 5px;
+    }
+    button.btn {
+      font-size: 1.4em;
+      background-color: #594c8d;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      width: 180px;
+      outline: none;
+      &:hover {
+        background-color: #6c6196;
+      }
+    }
+  }
+  div.containerParent.three {
+    text-align: center;
+    div.skill {
+      border: 2px solid #594c8d;
+      border-radius: 30px;
+    }
+    h1 {
+      color: #594c8d;
+      font-size: 3em;
+      font-weight: 600;
+    }
+    h3 {
+      font-size: 1.6em;
+      font-weight: 600;
+    }
+  }
+}

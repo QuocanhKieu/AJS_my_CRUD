@@ -1,0 +1,122 @@
+@import "./jquery-ui.css";
+@import "./bootstrap.css";
+@import "./all.css";
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;600;700&display=swap");
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Baloo Paaji 2", cursive;
+} 
+header {
+  height: 110vh;
+  background-image: url("../images/header.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header .containerParent.forHeader {
+  background-color: transparent;
+  padding-top: 20px;
+}
+header .containerParent.forHeader div.container.forHeader {
+  height: 70%;
+}
+header .containerParent.forHeader div.container.forHeader * {
+  padding: 0;
+  margin: 0;
+}
+header .containerParent.forHeader div.container.forHeader nav.navbar {
+  color: #fff !important;
+  background-color: transparent !important;
+  height: 50px;
+}
+header .containerParent.forHeader div.container.forHeader nav.navbar img {
+  width: 50px;
+  height: 50px;
+}
+header .containerParent.forHeader div.container.forHeader nav.navbar a {
+  color: inherit;
+}
+header .containerParent.forHeader div.container.forHeader nav.navbar div.navbar-collapse {
+  flex-grow: 0;
+}
+header .containerParent.forHeader div.container.forHeader nav.navbar div.navbar-nav > a.nav-link {
+  padding: 20px;
+  font-size: 1.6em;
+  font-weight: 400;
+  line-height: 0;
+}
+header .containerParent.forHeader div.container.forHeader nav.navbar div.navbar-nav > a.nav-link:hover {
+  background-color: #fff;
+  color: #594c8d;
+}
+header .containerParent.forHeader div.container.forHeader nav.navbar a.navbar-brand {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+header .containerParent.forHeader div.container.forHeader nav.navbar button.navbar-toggler {
+  background: #fff;
+}
+header .containerParent.forHeader div.container.forHeader nav.navbar span.navbar-toggler-icon {
+  font-size: 1.6em;
+  border: none;
+  color: #fff;
+}
+header div.containerParent.two {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header div.containerParent.two div.container.two {
+  padding-top: 20px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+header div.containerParent.two h1 {
+  padding-top: 40px;
+  font-size: 4em;
+  line-height: 60px;
+  font-weight: 700;
+}
+header div.containerParent.two h2 {
+  letter-spacing: 5px;
+}
+header div.containerParent.two button.btn {
+  font-size: 1.4em;
+  background-color: #594c8d;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  width: 180px;
+  outline: none;
+}
+header div.containerParent.two button.btn:hover {
+  background-color: #6c6196;
+}
+header div.containerParent.three {
+  text-align: center;
+}
+header div.containerParent.three div.skill {
+  border: 2px solid #594c8d;
+  border-radius: 30px;
+}
+header div.containerParent.three h1 {
+  color: #594c8d;
+  font-size: 3em;
+  font-weight: 600;
+}
+header div.containerParent.three h3 {
+  font-size: 1.6em;
+  font-weight: 600;
+}/*# sourceMappingURL=style.css.map */
