@@ -48,6 +48,12 @@ a:hover {
   color: unset;
 }
 
+.toFixed {
+  position: fixed !important;
+  background-color: rgba(108, 97, 150, 0.6) !important;
+  z-index: 1;
+}
+
 header {
   height: 70vh;
   background-image: url("../images/header.jpg");
@@ -67,8 +73,9 @@ header::before {
   background-image: linear-gradient(to top, #fff 0%, rgba(105, 90, 166, 0.35) 99%, rgba(105, 90, 166, 0.5) 100%);
 }
 header .containerParent.forHeader {
+  width: 100vw;
   background-color: transparent;
-  padding-top: 20px;
+  padding-block: 20px;
 }
 header .containerParent.forHeader div.container.forHeader {
   height: 70%;

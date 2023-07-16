@@ -54,6 +54,12 @@ a {
   }
 }
 
+.toFixed {
+  position: fixed !important;
+  background-color: #6c619699 !important;
+  z-index: 1;
+}
+
 header {
   height: 70vh;
   background-image: url("../images/header.jpg");
@@ -78,8 +84,9 @@ header {
     );
   }
   .containerParent.forHeader {
+    width: 100vw;
     background-color: transparent;
-    padding-top: 20px;
+    padding-block: 20px;
     div.container.forHeader {
       height: 70%;
       & * {
