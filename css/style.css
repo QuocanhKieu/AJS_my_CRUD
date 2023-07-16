@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "./jquery-ui.css";
 @import "./bootstrap.css";
 @import "./all.css";
@@ -371,12 +372,121 @@ footer div.containerParent.nine div.container.nine div.col-md-6.second a svg {
   margin-inline: 10px;
 }
 
+div.animation {
+  display: none;
+  position: fixed;
+  left: 3%;
+  top: 80%;
+  transform: scale(80%);
+}
+div.animation a.call-link {
+  width: 70px;
+  height: 70px;
+  background: #2ba5da;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-decoration: none;
+}
+div.animation a.call-link.icon-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2ba5da;
+  border-radius: 50%;
+  z-index: 0;
+  transform-origin: 50% 50%;
+  animation-name: spreading, blur-effect;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+}
+div.animation i,
+div.animation svg {
+  /*   transform: translateX(50%) */
+  color: white;
+  font-size: 35px;
+  transform-origin: 50% 50%;
+  animation-name: rotating;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+div.animation a#myAnchor::before {
+  content: "0961.056.732";
+  position: absolute;
+  bottom: 50%;
+  left: 125%;
+  color: linen;
+  background: #2ea5ea;
+  width: 0;
+  height: 3.5rem;
+  font-size: 2.3rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  transform: translateY(50%);
+  border-radius: 25px 30px 30px 0;
+  display: grid;
+  justify-items: center;
+  /*   align-items: center; */
+  align-content: center;
+  overflow: hidden;
+  transition: width 0.4s ease-in-out 0s;
+  /*   padding-inline-start: 4px; */
+}
+div.animation a#myAnchor:hover::before {
+  width: 16rem;
+}
+@keyframes spreading {
+  0% {
+    transform: scale(100%); /*là original state, no changes*/
+  }
+  50% {
+    transform: scale(160%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+@keyframes blur-effect {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  90% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 @media (min-width: 576px) {
   .skill {
     padding: 20px 20px 10px !important;
   }
   div.containerParent.four {
     text-align: center;
+  }
+  div.animation {
+    display: unset;
   }
 }
 @media (min-width: 768px) {
