@@ -58,6 +58,15 @@ a {
   position: fixed !important;
   background-color: #6c619699 !important;
   z-index: 1;
+  div.navbar-nav {
+    // background: #6c619699;
+
+    transform: translateY(10px);
+    a {
+      // color: $buttonSecond !important;
+      background-color: #6c6196;
+    }
+  }
 }
 
 header {
@@ -428,7 +437,7 @@ div.animation {
   a.call-link {
     width: 70px;
     height: 70px;
-    background: #2ba5da;
+    background: $buttonPrimary;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -444,7 +453,7 @@ div.animation {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #2ba5da;
+    background: $buttonSecond;
     border-radius: 50%;
     z-index: 0;
     transform-origin: 50% 50%;
@@ -471,7 +480,7 @@ div.animation {
     bottom: 50%;
     left: 125%;
     color: linen;
-    background: #2ea5ea;
+    background: $buttonPrimary;
     width: 0;
     height: 3.5rem;
     font-size: 2.3rem;
@@ -605,6 +614,17 @@ div.animation {
   }
 }
 
+@media (min-width: 992px) {
+  .toFixed {
+    div.navbar-nav {
+      a {
+        background-color: transparent !important;
+      }
+    }
+  }
+}
+
 @media (min-width: 1200px) {
 }
+
 // media querry section end

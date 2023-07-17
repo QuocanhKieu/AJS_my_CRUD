@@ -7,6 +7,7 @@ $(function () {
       $(".containerParent.forHeader").addClass("toFixed");
     } else {
       $(".containerParent.forHeader").removeClass("toFixed");
+
     }
   });
 });

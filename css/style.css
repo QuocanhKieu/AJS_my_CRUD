@@ -53,6 +53,12 @@ a:hover {
   background-color: rgba(108, 97, 150, 0.6) !important;
   z-index: 1;
 }
+.toFixed div.navbar-nav {
+  transform: translateY(10px);
+}
+.toFixed div.navbar-nav a {
+  background-color: #6c6196;
+}
 
 header {
   height: 70vh;
@@ -389,7 +395,7 @@ div.animation {
 div.animation a.call-link {
   width: 70px;
   height: 70px;
-  background: #2ba5da;
+  background: #6c6196;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -404,7 +410,7 @@ div.animation a.call-link.icon-container::after {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #2ba5da;
+  background: #4a3c81;
   border-radius: 50%;
   z-index: 0;
   transform-origin: 50% 50%;
@@ -429,7 +435,7 @@ div.animation a#myAnchor::before {
   bottom: 50%;
   left: 125%;
   color: linen;
-  background: #2ea5ea;
+  background: #6c6196;
   width: 0;
   height: 3.5rem;
   font-size: 2.3rem;
@@ -533,5 +539,10 @@ div.animation a#myAnchor:hover::before {
   }
   div.containerParent.nine div.container.nine div.col-md-6.second {
     justify-content: end !important;
+  }
+}
+@media (min-width: 992px) {
+  .toFixed div.navbar-nav a {
+    background-color: transparent !important;
   }
 }/*# sourceMappingURL=style.css.map */
