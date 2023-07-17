@@ -7,7 +7,12 @@ $(function () {
       $(".containerParent.forHeader").addClass("toFixed");
     } else {
       $(".containerParent.forHeader").removeClass("toFixed");
+    }
 
+    if (window.scrollY > 600) {
+      $(".toTop").show();
+    } else {
+      $(".toTop").hide();
     }
   });
 });

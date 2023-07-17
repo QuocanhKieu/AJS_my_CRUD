@@ -93,7 +93,7 @@ header {
     );
   }
   .containerParent.forHeader {
-    width: 100vw;
+    width: 100%;
     background-color: transparent;
     padding-block: 20px;
     div.container.forHeader {
@@ -427,13 +427,12 @@ footer {
 }
 
 // phone animation start
-
 div.animation {
   display: none;
   position: fixed;
-  left: 3%;
+  left: 1%;
   top: 80%;
-  transform: scale(80%);
+  transform: scale(70%);
   a.call-link {
     width: 70px;
     height: 70px;
@@ -547,8 +546,33 @@ div.animation {
     }
   }
 }
-
 // phone animation end
+
+//toTop btn start
+div.toTop {
+  border: 1px solid $buttonPrimary;
+  position: fixed;
+  border-radius: 15px;
+  font-size: 1.1em;
+  font-weight: 600;
+  top: 83%;
+  right: 1%;
+  background-color: #6c6196ee;
+  color: $buttonSecond;
+  width: 30px;
+  height: 30px;
+  display: none;
+  a {
+    padding: 5px;
+    display: block;
+    line-height: 0;
+
+    i,
+    svg {
+    }
+  }
+}
+//toTop btn end
 
 // media querry section start
 @media (min-width: 576px) {
@@ -618,7 +642,10 @@ div.animation {
   .toFixed {
     div.navbar-nav {
       a {
-        background-color: transparent !important;
+        background-color: unset !important;
+        &:hover {
+          background-color: #fff !important;
+        }
       }
     }
   }
