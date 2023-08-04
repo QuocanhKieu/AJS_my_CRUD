@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="angularJSFilter">
+<html lang="en" ng-app="angularJsWeatherApp">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,40 +8,45 @@
 
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./js/all.js"></script>
-    <script src="./angularJSFilter.module.js"></script>
+    <script src="./angularJsWeatherApp.module.js"></script>
 
     <link rel="stylesheet" href="./css/style.css" />
     <script>
       document.write(`<base href="${document.location}" target="_blank">`);
     </script>
   </head>
-  <body ng-controller="filterController as ctrl">
+  <body ng-controller="angularJsWeatherAppController as ctrl">
     <div class="container">
-      <h1>CodeLean.vn</h1>
-      <h3>filtering input text ng-repeat values according to ng-model</h3>
-      <label for="seachBox" class="form-label"
-        >type a programing language name in the input field</label
-      >
-      <input
-        type="text"
-        ng-model="ctrl.searchText"
-        id="seachBox"
-        placeholder="Search"
-        class="form-control"
-        aria-describedby="SearchHelp"
-      />
-      <span id="SearchHelp" class="form-text">
-        Enter something to search.
-      </span>
-      <p>
-        Filter the list of objects before turn their name to capitalization by
-        using custom filter.
-      </p>
-      <ul>
-        <li ng-repeat="language in ctrl.languages| filter:ctrl.searchText">
-          {{language.name |toCap}}
-        </li>
-      </ul>
+      <p>Enter City to search Weather</p>
+      <div class="row">
+        <div class="col-auto">
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="City"
+            ng-model="ctrl.city"
+          />
+        </div>
+        <div class="col-auto">
+          <input type="button" ng-click="ctrl.search()" value="Search" />
+        </div>
+      </div>
+      Ha Noi time {{ctrl.date| date:'dd/MM/yyyy HH:mm:ss'}}
+      <div class="row" ng-show="ctrl.showWeather">
+        <div class="col-auto">
+          <img src="{{ctrl.imgAddress}}" alt="Weather Condition Image" />
+        </div>
+        <div class="col-auto">
+          <p>Current: {{ctrl.curTemp | toC |number: 1}} &deg;C</p>
+          <p>
+            min: {{ctrl.minTemp| toC|number: 1}} &deg;C , max: {{ctrl.maxTemp |
+            toC| number: 1}} &deg;C
+          </p>
+          <p>Wind: {{ctrl.wind}} km/h</p>
+        </div>
+      </div>
+      <div ng-show="ctrl.showError">Something went wrong.</div>
     </div>
   </body>
 </html>
