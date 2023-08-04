@@ -1,0 +1,27 @@
+[
+    {
+        "name": "ThiDK",
+        "city": "Ha Noi",
+        "state": "HN"
+    },
+    {
+        "name": "Dang Kim Thi",
+        "city": "Ha Noi",
+        "state": "HN"
+    },
+    {
+        "name": "Truong Giang",
+        "city": "Quang Nam",
+        "state": "QN"
+    },
+    {
+        "name": "Tran Thanh",
+        "city": "TP.Ho Chi Minh",
+        "state": "TP.HCM"
+    },
+    {
+        "name": "Minh Tuan",
+        "city": "Da Nang",
+        "state": "DN"
+    }
+]
