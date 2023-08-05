@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="angularJsWeatherApp">
+<html lang="en" ng-app="angularJsCRUD">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,45 +8,67 @@
 
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="./js/all.js"></script>
-    <script src="./angularJsWeatherApp.module.js"></script>
+    <script src="./angularJsCRUD.module.js"></script>
 
     <link rel="stylesheet" href="./css/style.css" />
     <script>
       document.write(`<base href="${document.location}" target="_blank">`);
     </script>
   </head>
-  <body ng-controller="angularJsWeatherAppController as ctrl">
+  <body ng-controller="angularJsCRUDController as ctrl">
     <div class="container">
-      <p>Enter City to search Weather</p>
-      <div class="row">
-        <div class="col-auto">
-          <input
-            type="text"
-            name="city"
-            id="city"
-            placeholder="City"
-            ng-model="ctrl.city"
-          />
-        </div>
-        <div class="col-auto">
-          <input type="button" ng-click="ctrl.search()" value="Search" />
-        </div>
-      </div>
-      Ha Noi time {{ctrl.date| date:'dd/MM/yyyy HH:mm:ss'}}
-      <div class="row" ng-show="ctrl.showWeather">
-        <div class="col-auto">
-          <img src="{{ctrl.imgAddress}}" alt="Weather Condition Image" />
-        </div>
-        <div class="col-auto">
-          <p>Current: {{ctrl.curTemp | toC |number: 1}} &deg;C</p>
-          <p>
-            min: {{ctrl.minTemp| toC|number: 1}} &deg;C , max: {{ctrl.maxTemp |
-            toC| number: 1}} &deg;C
-          </p>
-          <p>Wind: {{ctrl.wind}} km/h</p>
-        </div>
-      </div>
-      <div ng-show="ctrl.showError">Something went wrong.</div>
+      <input
+        type="text"
+        ng-model="ctrl.userName"
+        placeholder="Enter User Name"
+        class="form-control"
+      />
+      <input
+        type="text"
+        ng-model="ctrl.userEmail"
+        placeholder="Enter User Email"
+        class="form-control"
+      />
+      <button ng-click="ctrl.addUser()">Add New User</button>
+    </div>
+    <div class="table-responsive container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Tool</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="(key, userValue) in ctrl.users ">
+            <th scope="row">{{$index}}</th>
+            <td ng-show="!userValue.editing">{{userValue.name}}</td>
+            <td ng-show="userValue.editing">
+              <input
+                type="text"
+                ng-model="userValue.name"
+                class="form-control"
+              />
+            </td>
+            <td ng-show="!userValue.editing">{{userValue.email}}</td>
+            <td ng-show="userValue.editing">
+              <input
+                type="text"
+                ng-model="userValue.email"
+                class="form-control"
+              />
+            </td>
+            <td>
+              <button ng-click="ctrl.toggleEditing(userValue)">
+                {{userValue.editing ? 'Save': 'Edit' }}
+              </button>
+              <button ng-click="ctrl.deleteUser(key)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
