@@ -42,29 +42,33 @@
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="(key, userValue) in ctrl.users ">
-            <th scope="row">{{$index}}</th>
-            <td ng-show="!userValue.editing">{{userValue.name}}</td>
-            <td ng-show="userValue.editing">
+          <tr ng-repeat="(key, userValue) in ctrl.users " class="p-5">
+            <th scope="row" >{{$index}}</th>
+            <td ng-show="!userValue.editing" class="showing base" >
+              {{userValue.name}}
+            </td>
+            <td ng-show="userValue.editing" class="showing">
               <input
                 type="text"
                 ng-model="userValue.name"
                 class="form-control"
               />
             </td>
-            <td ng-show="!userValue.editing">{{userValue.email}}</td>
-            <td ng-show="userValue.editing">
+            <td ng-show="!userValue.editing" class="showing base">
+              {{userValue.email}}
+            </td>
+            <td ng-show="userValue.editing" class="showing">
               <input
                 type="text"
                 ng-model="userValue.email"
                 class="form-control"
               />
             </td>
-            <td>
-              <button ng-click="ctrl.toggleEditing(userValue)">
+            <td class="btnContainer">
+              <button ng-click="ctrl.toggleEditing(userValue)" class="edit btn btn-primary">
                 {{userValue.editing ? 'Save': 'Edit' }}
               </button>
-              <button ng-click="ctrl.deleteUser(key)">Delete</button>
+              <button ng-click="ctrl.deleteUser(key)" class="btn btn-warning">Delete</button>
             </td>
           </tr>
         </tbody>

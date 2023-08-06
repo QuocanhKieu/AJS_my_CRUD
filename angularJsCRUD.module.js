@@ -11,8 +11,10 @@ myApp.controller("angularJsCRUDController", function () {
     user2: { email: "abc@gmail.com", name: "Kim Quang Minh", editing: false },
   };
 
-  ctrl.userName = "";
-  ctrl.userEmail = "";
+  ctrl.newName = "";
+  ctrl.newEmail = "";
+  ctrl.newFullName = "";
+  
   ctrl.addUser = function () {
     let userOrder = "user" + (Object.keys(ctrl.users).length + 1);
 
